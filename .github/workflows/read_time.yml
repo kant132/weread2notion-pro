@@ -45,7 +45,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Remove folder
-        run: rm -rf ./OUT_FOLDER
+        run: rm -rf ./OUT_FOLDER 
+      - name: Create folder
+        run: mkdir ./OUT_FOLDER
       - name: Set default year if not provided
         run: echo "YEAR=$(date +"%Y")" >> $GITHUB_ENV
         if: env.YEAR == ''
