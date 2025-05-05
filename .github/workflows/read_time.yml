@@ -60,7 +60,7 @@ jobs:
           find . -type f ! -name "weread.svg" -exec rm -f {} +
           cd ..
           RANDOM_FILENAME=$(uuidgen).svg
-          mv ./weread.svg ./OUT_FOLDER/$RANDOM_FILENAME
+          mv ./OUT_FOLDER/weread.svg ./OUT_FOLDER/$RANDOM_FILENAME
           echo "Renamed file to $RANDOM_FILENAME"
       - name: push
         run: |
